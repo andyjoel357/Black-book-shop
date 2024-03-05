@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Black book shop</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="js/scripts.js"></script>
+    </head>
+    <body >
+       <header>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Black book shop</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Black Book Shop</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body w-100 overflow-auto">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                      </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="pages/nosotros.html">Conocenos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="pages/contacto.html">Contacta con nosotros</a>
+                    </li>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <main>
+            <section id="cart-section" class="py-3 bg-light">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-8 mx-auto">
+                      <h5 class="text-center mb-3">Carrito de compras</h5>
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Acción</th>
+                          </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td colspan="3" class="text-right font-weight-bold">Subtotal:</td>
+                            <td id="cart-subtotal">$0.00</td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" class="text-right font-weight-bold">IVA:</td>
+                            <td id="cart-iva">$0.00</td>
+                          </tr>
+                          <tr>
+                            <td colspan="3" class="text-right font-weight-bold">Total:</td>
+                            <td id="cart-total">$0.00</td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </section>
+        </main>
+       <br><br>
+       <!--Seccion de carrusel-->
+      <section>
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                
+              <div class="carousel-item active">   
+                <img src="https://hmecuador.vtexassets.com/arquivos/ids/947829-483-725?v=638256328308600000&width=483&height=725&aspect=true" class="d-block w-100">
+                <div class="carousel-caption">
+                    <div class="card-body p-4">
+                        <div class="text-center"  style="background-color: rgba(160, 177, 192, 0.548); width: 210px; margin: auto;" >
+                            <h5 class="fw-bolder" style="color: black;">Sudadera Premium</h5>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                            </div>
+                           <h5 style="color: black;"> $50.00</h5>
+                        </div>
+                    </div>
+                    <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Sudadera Premium', precio: 50})">Agregar</button></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://hmecuador.vtexassets.com/arquivos/ids/1461793-600-900?v=638387567241170000&width=600&height=900&aspect=true" class="d-block w-100" width="200">
+                <div class="carousel-caption">
+                    <div class="card-body p-4">
+                        <div class="text-center"  style="background-color: rgba(160, 177, 192, 0.548); width: 210px; margin: auto;" >
+                            <h5 class="fw-bolder" style="color: black;">Cárdigan</h5>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                            </div>
+                           <h5 style="color: black;"> $35.99</h5>
+                        </div>
+                    </div>
+                    <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Cárdigan', precio: 35.99})">Agregar</button></div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="https://hmecuador.vtexassets.com/arquivos/ids/1602664-483-725?v=638440272185230000&width=483&height=725&aspect=true" class="d-block w-100" width="200">
+                <div class="carousel-caption">
+                    <div class="card-body p-4">
+                        <div class="text-center"  style="background-color: rgba(160, 177, 192, 0.548); width: 210px; margin: auto;" >
+                            <h5 class="fw-bolder" style="color: black;">Sudadera Silver</h5>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                            </div>
+                           <h5 style="color: black;"> $55.00</h5>
+                        </div>
+                    </div>
+                    <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Sudadera Silver', precio: 55})">Agregar</button></div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="https://hmecuador.vtexassets.com/arquivos/ids/1431513-600-900?v=638376324970700000&width=600&height=900&aspect=true" class="d-block w-100">
+                <div class="carousel-caption">
+                    <div class="card-body p-4">
+                        <div class="text-center"  style="background-color: rgba(160, 177, 192, 0.548); width: 210px; margin: auto;" >
+                            <h5 class="fw-bolder" style="color: black;">Sudadera Le Maris</h5>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div>  
+                            </div>
+                           <h5 style="color: black;"> $24.00</h5>
+                        </div>
+                    </div>
+                    <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Sudadera Le Maris', precio: 24})">Agregar</button></div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img src="https://hmecuador.vtexassets.com/arquivos/ids/1547969-483-725?v=638423417970000000&width=483&height=725&aspect=true" class="d-block w-100">
+                <div class="carousel-caption">
+                    <div class="card-body p-4">
+                        <div class="text-center"  style="background-color: rgba(160, 177, 192, 0.548); width: 210px; margin: auto;" >
+                            <h5 class="fw-bolder" style="color: black;">Camiseta Hot</h5>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                                <div class="bi-star-fill"></div> 
+                            </div>
+                           <h5 style="color: black;"> $15.00</h5>
+                        </div>
+                    </div>
+                    <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Camiseta Hot', precio: 15})">Agregar</button></div>
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" >
+              <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <br> <br>
+      <!-- Seccion de productos para hombre-->
+      <h1 style="text-align: center;">Prendas para hombre</h1>
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1525898-483-725?v=638423289754830000&width=483&height=725&aspect=true" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Fancy</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $120.00 - $280.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Fancy', precio: 120})">Agregar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1459661-600-900?v=638386711491930000&width=600&height=900&aspect=true" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Camiseta Fit</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Camiseta Fit', precio: 25})">Agregar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-90">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Base</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1409986-483-725?v=638368552551400000&width=483&height=725&aspect=true" width=""/>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Sudadera Mistik</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Sudadera Mistik', precio: 25})">Agregar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-90">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Premium</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1501516-483-725?v=638423132707500000&width=483&height=725&aspect=true" width=""/>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Playera Craneo</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $15.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Playera Craneo', precio: 15})">Agregar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-90">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://ec.patagonia.com/cdn/shop/products/60371_PIHO.jpg?v=1684449862"/>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Playera</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00 - $80.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Playera', precio: 40})">Agregar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-90">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Gold</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://ec.patagonia.com/cdn/shop/products/60371_FFBL_750x750_crop_center.jpg?v=1684449862" alt="Item" />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Camiseta Especial</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Camiseta Especial', precio: 18})">Agregar</button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-5">
+                        <div class="card h-90">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://ec.patagonia.com/cdn/shop/products/84711_BLK_56061e27-f687-4f54-a574-4c29dcee38af.jpg?v=1700686438"/>    
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Chompa de plumas</h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        
+                                    </div>
+                                    <!-- Product price-->
+                                    $80.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Chompa de plumas', precio: 80})">Agregar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-90">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1313372-483-725?v=638328803604130000&width=483&height=725&aspect=true"/>
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Camisa de Leñador </h5>
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        
+                                    </div>
+                                    <!-- Product price-->
+                                    $45.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Camisa de Leñador', precio: 45})">Agregar</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!-- Seccion de productos para hombre-->
+      <h1 style="text-align: center;">Prendas para Mujer</h1>
+      <section class="py-5">
+          <div class="container px-4 px-lg-5 mt-5">
+              <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                  <div class="col mb-5">
+                      <div class="card h-100">
+                          <!-- Product image-->
+                          <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1522522-600-900?v=638423269976200000&width=600&height=900&aspect=true" alt="..." />
+                          <!-- Product details-->
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <!-- Product name-->
+                                  <h5 class="fw-bolder">Jeans Regulares</h5>
+                                  <div class="d-flex justify-content-center small text-warning mb-2">
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                  </div>
+                                  <!-- Product price-->
+                                  $44.00
+                              </div>
+                          </div>
+                          <!-- Product actions-->
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                              <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Jeans Regulares', precio: 44})">Agregar</button></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col mb-5">
+                      <div class="card h-100">
+                          <!-- Sale badge-->
+                          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Gold</div>
+                          <!-- Product image-->
+                          <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1523961-600-900?v=638423278618900000&width=600&height=900&aspect=true" alt="..." />
+                          <!-- Product details-->
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <!-- Product name-->
+                                  <h5 class="fw-bolder">Gabardina Sarga</h5>
+                                  <div class="d-flex justify-content-center small text-warning mb-2">
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                  </div>
+                                  <!-- Product price-->
+                                  <span class="text-muted text-decoration-line-through">$90.00</span>
+                                 - $84.99
+                              </div>
+                          </div>
+                          <!-- Product actions-->
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                              <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Gabardina Sarga', precio:84.99 })">Agregar</button></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col mb-5">
+                      <div class="card h-90">
+                          <!-- Sale badge-->
+                          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Premium</div>
+                          <!-- Product image-->
+                          <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1560221-600-900?v=638425615943630000&width=600&height=900&aspect=true""/>
+                          <!-- Product details-->
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <!-- Product name-->
+                                  <h5 class="fw-bolder">Vestido túnica</h5>
+                                  <div class="d-flex justify-content-center small text-warning mb-2">
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                  </div>
+                                  <!-- Product price-->
+                                  $35.00
+                              </div>
+                          </div>
+                          <!-- Product actions-->
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                              <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Vestido túnica', precio: 35})">Agregar</button></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col mb-5">
+                      <div class="card h-90">
+                          <!-- Sale badge-->
+                          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Base</div>
+                          <!-- Product image-->
+                          <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1529087-600-900?v=638423308309430000&width=600&height=900&aspect=true" width=""/>
+                          <!-- Product details-->
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <!-- Product name-->
+                                  <h5 class="fw-bolder">Cazadora Oversize</h5>
+                                  <div class="d-flex justify-content-center small text-warning mb-2">
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                  </div>
+                                  <!-- Product price-->
+                                  $34.00
+                              </div>
+                          </div>
+                          <!-- Product actions-->
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                              <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Cazadora Oversize', precio: 34})">Agregar</button></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col mb-5">
+                      <div class="card h-90">
+                          <!-- Product image-->
+                          <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1533110-600-900?v=638423331828930000&width=600&height=900&aspect=true"/>
+                          <!-- Product details-->
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <!-- Product name-->
+                                  <h5 class="fw-bolder">Cazadora Bomber</h5>
+                                  <div class="d-flex justify-content-center small text-warning mb-2">
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      
+                                  </div>
+                                  <!-- Product price-->
+                                  $44.00
+                              </div>
+                          </div>
+                          <!-- Product actions-->
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                              <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Cazadora Bomber', precio: 44})">Agregar</button></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col mb-5">
+                      <div class="card h-90">
+                          <!-- Product image-->
+                          <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1559335-600-900?v=638425611145630000&width=600&height=900&aspect=true" />
+                          <!-- Product details-->
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <!-- Product name-->
+                                  <h5 class="fw-bolder">Blusa Cropped</h5>
+                                  <!-- Product reviews-->
+                                  <div class="d-flex justify-content-center small text-warning mb-2">
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                  </div>
+                                  <!-- Product price-->
+                            
+                                  $17.00
+                              </div>
+                          </div>
+                          <!-- Product actions-->
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                              <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Blusa Cropped', precio: 17})">Agregar</button></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col mb-5">
+                      <div class="card h-90">
+                          <!-- Product image-->
+                          <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1565941-600-900?v=638429897397630000&width=600&height=900&aspect=true"/>    
+                          <!-- Product details-->
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <!-- Product name-->
+                                  <h5 class="fw-bolder">Camiseta Rayas</h5>
+                                  <div class="d-flex justify-content-center small text-warning mb-2">
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      
+                                  </div>
+                                  <!-- Product price-->
+                                  $19.00
+                              </div>
+                          </div>
+                          <!-- Product actions-->
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                              <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Camiseta Rayas', precio: 19})">Agregar</button></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col mb-5">
+                      <div class="card h-90">
+                        <!--Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Premium</div>
+                          <!-- Product image-->
+                          <img class="card-img-top" src="https://hmecuador.vtexassets.com/arquivos/ids/1488131-600-900?v=638423048870700000&width=600&height=900&aspect=true"/>
+                          <!-- Product details-->
+                          <div class="card-body p-4">
+                              <div class="text-center">
+                                  <!-- Product name-->
+                                  <h5 class="fw-bolder">Camisa Nirvana</h5>
+                                  <div class="d-flex justify-content-center small text-warning mb-2">
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      <div class="bi-star-fill"></div>
+                                      
+                                  </div>
+                                  <!-- Product price-->
+                                  $14.99
+                              </div>
+                          </div>
+                          <!-- Product actions-->
+                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                              <div class="text-center"><button class="btn btn-outline-dark mt-auto" onclick="agregarAlCarrito({nombre: 'Camiseta Nirvana', precio: 14.99})">Agregar</button></div>
+                          </div>
+                      </div>
+                  </div>
+                  
+              </div>
+          </div>
+      </section>
+    </body>
+    <footer style="background-color: rgba(255, 255, 255, 0.771);">
+        <div class="row">
+            <ul class="redes">
+               
+                <li class="icon twitter">
+                    <span class="tooltip">Twitter</span>
+                    <span><i class="fab fa-twitter"></i></span>
+                </li>
+                <li class="icon instagram">
+                    <span class="tooltip">Instagram</span>
+                    <span><i class="fab fa-instagram"></i></span>
+                </li>
+                <li class="icon linkedin">
+                    <span class="tooltip">Linkedin</span>
+                    <span><i class="fab fa-linkedin"></i></span>
+                </li>
+                <li class="icon pinterest">
+                    <span class="tooltip">Pinterest</span>
+                    <span><i class="fab fa-pinterest"></i></span>
+                </li>
+                <li class="icon telegram">
+                    <span class="tooltip">Telegram</span>
+                    <span><i class="fab fa-telegram"></i></span>
+                </li>
+            </ul>
+            <div class="col col-md-4 ">
+                <h5>Redes Sociales</h5>
+                Black Book
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fa-brands fa-facebook fa-beat"></i></a>
+            </div>
+            <div class="col col-md-4 ">
+                <h5>Correos</h5>
+                andyNarv@gmail.com
+                <a href="mailto:correo@example.com" target="_blank"><i class="fa-solid fa-envelope fa-beat" style="color: red;"></i></a>
+                
+            </div>
+            <div class="col col-md-4">
+                <h5>Contactos</h5>
+                +123456789
+                <a href="tel:+123456789"><i class="fas fa-phone fa-beat" style="color: green;"></i></a>    
+            </div>
+        </div>
+    </footer>
+</html>
